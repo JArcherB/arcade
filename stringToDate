@@ -1,0 +1,23 @@
+var date_text = $feature["START_DATE"]
+
+function Convert2Date(date_text){
+
+	// Month List 
+	var months = {"1": 0, "2": 1, "3": 2, "4": 3, "5": 4, "6": 5, "7": 6, "8": 7, "9": 8, "10": 9, "11": 10, "12": 11};
+              
+	// Date List
+	var date_list = Split(date_text, '/')
+	
+	// Year
+	var yearNum = Number(date_list[2]);
+	
+	// Month
+	var monthNum = months[date_list[0]];
+
+	// Day
+	var dayNum = Number(date_list[1]);
+
+	return Date(yearNum,monthNum,dayNum);
+}
+
+return Convert2date(date_text);
